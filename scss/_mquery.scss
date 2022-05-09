@@ -39,25 +39,22 @@
         font-size: 2.5rem;
         padding: 0 0 0 2vw;
     }
-    body
-    {
-        font-size: 3rem;
-    }
+
     .servicios {
         article
         {
-            width: 40vw;
+            width: 27vw;
             column-gap: 5vw;
             h3
             {
-                font-size: 6rem;
+                font-size: 3rem;
                 padding: .8rem;
-                height: 15rem;
+                height: 9rem;
                 width: 80%;
             }
             p
             {
-                font-size: 4rem;
+                font-size: 2.5rem;
             }
         }    
 
@@ -79,7 +76,7 @@
         width: 350px;
         h1
         {
-            font-size: 4.5rem;
+            font-size: 4rem;
             margin-bottom: 1vh;
         }
         h2
@@ -88,25 +85,21 @@
         }
     } 
 
-    .titulo--1
+/*     .titulo--1
     {
         width: 27rem;
     }
     .titulo--2
     {
         width: 31rem;
-    }
+    } */
     .titulo span
     {
         margin-bottom: 1.5rem;
     }
     .servicios
     {
-        column-gap: 12vw;
-        article
-        {
-            width: 30vw;
-        }
+        column-gap: 5vw;
     }
 }
 
@@ -140,7 +133,11 @@
         }
     }
     
-
+    .servicios
+    {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5vw;
+    }
 
     .carousel
     {
@@ -211,7 +208,8 @@
         margin: 1% 2vw;
     } 
     .navbar{
-        margin: 0;
+        margin: 1rem 0;
+        font-size: 1.3rem;
         .container-fluid
         {
             justify-content: center;
@@ -226,7 +224,7 @@
         width: 270px;
         h1
         {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: 0.5vh;
         }
         h2
@@ -235,14 +233,14 @@
         }
     } 
 
-    .titulo--1
+/*     .titulo--1
     {
         width: 21rem;
     }
     .titulo--2
     {
         width: 24rem;
-    }
+    } */
     .titulo span
     {
         margin-bottom: 1rem;
@@ -294,6 +292,43 @@
             width: 40vw;
         }
     }
+    .contact{
+        flex-direction: column;
+        align-content: center;
+        row-gap: 5vw;
+    }
+    .contactForm
+    {
+        background-color: #fff;
+        width: 350px;
+        display: grid;
+        grid-template-areas:
+            "tagName"
+            "inputName"
+            "tagMail"
+            "inputMail"
+            "tagCountry"
+            "inputCountry"
+            "tagServices"
+            "inputServices"
+            "tagMessage"
+            "inputMessage"
+            "buttonSend"
+        ;
+        text-align: right;
+        gap: 1vw;
+
+        label
+        {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: left;
+        }
+    }
+    .projects .row
+    {
+        max-width: 480px;
+    }
 }
 
 @media screen and (max-width: 660px)
@@ -301,12 +336,6 @@
     .servicios
     {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "servicio1"
-        "servicio2"
-        "servicio3"
-        "servicio4";
         column-gap: none;
         article
         {
@@ -378,13 +407,13 @@
         }
     }
 
-    .titulo--1 {
+/*     .titulo--1 {
         width: 27rem;
     }
 
     .titulo--2 {
-        width: 31rem;
-    }
+        width: 32rem;
+    } */
 
     .titulo span {
         margin-bottom: 1.5rem;
@@ -409,6 +438,15 @@
             color: $colorPpal;
         }
     }
+}
+
+@media screen and (max-width: 576px)
+{
+    .dropdown-menu.show
+    {
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 450px)
@@ -436,35 +474,6 @@
         padding: 5px;
         width: 90%;
     }
-    .contactForm
-    {
-        background-color: #fff;
-        width: 350px;
-        display: grid;
-        grid-template-areas:
-            "tagName"
-            "inputName"
-            "tagMail"
-            "inputMail"
-            "tagCountry"
-            "inputCountry"
-            "tagServices"
-            "inputServices"
-            "tagMessage"
-            "inputMessage"
-            "buttonSend"
-        ;
-        text-align: right;
-        gap: 1vw;
-
-        label
-        {
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-align: left;
-        }
-    }
-    .contactForm 
     .table
     {
         min-width: 500px;
@@ -498,13 +507,13 @@
         }
     }
 
-    .titulo--1 {
+/*     .titulo--1 {
         width: 17rem;
     }
 
     .titulo--2 {
         width: 20rem;
-    }
+    } */
 
     .titulo span {
         margin-bottom: 1rem;

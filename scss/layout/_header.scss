@@ -12,7 +12,7 @@ mark
 .navbar
 {
     background-color: $colorPpal;
-    margin: 1.5rem 0rem;
+    margin: 1rem 0rem;
     font-size: 1.6rem;
     padding: 0 0 0 1vw;
 }
@@ -46,14 +46,16 @@ header
 }
 .dropdown-menu
 {
-    background-color: #f4e2d2e8;
+    background-color: #eed7c4;
 }
 .dropdown-item
 {
-    color: $colorPpal;
-    padding: 0.75rem 1rem;
+    color: $crema;
+    padding: 0rem 1rem;
+    margin-top: 0.5rem;
     font-size: 1.25rem;
     font-weight: bold;
+    background-color: $colorPpal;
 }
 .navbar-toggler
 {
@@ -67,5 +69,5 @@ header
 }
 .dropdown-menu.show
 {
-    text-align: center;
+    text-align: left;
 }

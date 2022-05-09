@@ -15,12 +15,16 @@
 .banner__info
 {
     width: 470px;
-    align-items:flex-start;
     h1
     {
         display: flex;
         color: #fff;
         font-size: 6rem;
+        align-items:flex-start;
+        mark
+        {
+            padding-right: 1.5rem;
+        }
     }
     h2
     {
@@ -38,7 +42,7 @@
 .titulo
 {
     display: flex;
-    flex-flow: row;
+    flex-flow:column;
     flex-wrap: wrap;
     row-gap: 1rem;
 }

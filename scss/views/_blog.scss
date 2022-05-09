@@ -1,4 +1,11 @@
 .card
 {
     box-shadow: 3px 3px 3px $colorPpal;
+    font-size: 1rem;
+    .resaltador{
+        background-color: $colorOpuesto;
+    }
+    .hashtag{
+        font-weight: bold;
+    }
 }

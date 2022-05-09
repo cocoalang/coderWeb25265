@@ -23,23 +23,32 @@ html {
   margin: 0; }
 
 h1 {
-  font-size: 6rem;
+  font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase; }
 
 h2 {
-  font-size: 6rem;
+  font-size: 2rem;
   font-weight: 400; }
 
 h3 {
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-weight: 600; }
+
+h5 {
+  font-size: 1.5rem; }
 
 a {
   text-decoration: none; }
 
 p {
-  font-size: 1.5rem; }
+  font-size: 1rem; }
+
+.card-body {
+  color: #B88BAD; }
+
+.card-title {
+  font-weight: 900; }
 
 mark {
   background-color: #B88BAD;
@@ -52,7 +61,7 @@ mark {
 
 .navbar {
   background-color: #B88BAD;
-  margin: 1.5rem 0rem;
+  margin: 1rem 0rem;
   font-size: 1.6rem;
   padding: 0 0 0 1vw; }
 
@@ -78,13 +87,15 @@ header {
   padding-right: 2vw; }
 
 .dropdown-menu {
-  background-color: #f4e2d2e8; }
+  background-color: #eed7c4; }
 
 .dropdown-item {
-  color: #B88BAD;
-  padding: 0.75rem 1rem;
+  color: #FFF5FB;
+  padding: 0rem 1rem;
+  margin-top: 0.5rem;
   font-size: 1.25rem;
-  font-weight: bold; }
+  font-weight: bold;
+  background-color: #B88BAD; }
 
 .navbar-toggler {
   font-size: 2rem;
@@ -95,7 +106,7 @@ header {
   text-align: center; }
 
 .dropdown-menu.show {
-  text-align: center; }
+  text-align: left; }
 
 .banner {
   display: flex;
@@ -111,12 +122,14 @@ header {
   animation-iteration-count: 1; }
 
 .banner__info {
-  width: 470px;
-  align-items: flex-start; }
+  width: 470px; }
   .banner__info h1 {
     display: flex;
     color: #fff;
-    font-size: 6rem; }
+    font-size: 6rem;
+    align-items: flex-start; }
+    .banner__info h1 mark {
+      padding-right: 1.5rem; }
   .banner__info h2 {
     color: #B88BAD;
     padding-left: 4vw;
@@ -129,7 +142,7 @@ header {
 
 .titulo {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   flex-wrap: wrap;
   row-gap: 1rem; }
 
@@ -138,46 +151,54 @@ header {
   margin: 9vw 10vw; }
 
 .carousel-caption h5 {
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.85);
-  color: #B88BAD; }
+  background-color: #B88BAD;
+  color: #FFF5FB;
+  padding: 0.7rem; }
 
 .carousel-caption p {
-  font-size: 3rem;
-  background-color: rgba(255, 255, 255, 0.85);
+  font-size: 1.5rem;
+  background-color: #B88BAD;
+  color: #FFF5FB;
+  padding: 0.7rem; }
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  width: 6vw;
+  height: 6vw;
   color: #B88BAD; }
 
 /* <<<<<<< FORMATOS MAIN SERVICIOS EN INDEX >>>>>>>>>>>>> */
 .servicios {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "servicio1 servicio2" "servicio3 servicio4";
-  row-gap: 4vw;
-  column-gap: 20vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 3vw;
+  column-gap: 3vw;
   justify-content: space-evenly;
   align-content: space-evenly;
   align-items: center;
   color: #B88BAD;
-  padding: 12vh 15vw 0 15vw;
+  padding: 5vw 5vw 0 5vw;
+  margin-bottom: 3vw;
   text-align: center; }
   .servicios article {
     display: flex;
     flex-direction: column;
     align-self: start;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
     .servicios article img {
-      height: 80%;
+      width: 80px;
       justify-self: center; }
     .servicios article h3 {
       display: inline-block;
       align-self: center;
       padding: .8rem;
-      height: 7rem;
+      /* height: 7rem; */
       width: 80%; }
     .servicios article p {
-      padding: .5em; }
+      padding: .5em;
+      max-width: 380px; }
     .servicios article div {
       height: 35%;
       margin-bottom: 2%; }
@@ -204,7 +225,8 @@ header {
   border-spacing: 10px;
   min-width: 810px; }
   .table thead {
-    font-size: 3.5rem; }
+    font-size: 2rem;
+    letter-spacing: 0.2rem; }
   .table td {
     background-color: #dbc4dfcc;
     padding: 1vw;
@@ -212,10 +234,17 @@ header {
   .table ul {
     list-style: none;
     padding-left: 0; }
+    .table ul li {
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem; }
+  .table .destacado {
+    font-weight: 900;
+    font-stretch: expanded;
+    font-size: 1.8rem; }
 
 .planes {
   border-spacing: 8px;
-  font-size: 3rem; }
+  font-size: 2rem; }
 
 table.planes {
   padding: 0 3vw; }
@@ -223,10 +252,10 @@ table.planes {
 .planes__titulo {
   text-align: left;
   color: #B88BAD;
-  padding-left: 3vw; }
+  padding-left: 10vw; }
 
 .contenido_planes {
-  font-size: 3rem; }
+  font-size: 2rem; }
   .contenido_planes td {
     width: 80vw; }
 
@@ -253,25 +282,30 @@ table.planes {
   display: grid;
   grid-template-areas: "tagName inputName" "tagMail inputMail" "tagCountry inputCountry" "tagServices inputServices" "tagMessage inputMessage" "NONE buttonSend";
   text-align: right;
-  gap: 1vw; }
+  gap: 1vw;
+  font-size: 1.3vw; }
   .contactForm input {
     background-color: #DBC4DF;
     border: none;
     color: #fff;
-    padding: 0.3vw; }
+    padding: 0.3vw;
+    font-size: 1rem; }
   .contactForm label {
-    font-size: 1.9vw;
     color: #B88BAD; }
   .contactForm select {
     background-color: #DBC4DF;
     border: none;
     color: #fff;
-    padding: 0.3vw; }
+    padding: 0.3vw;
+    font-size: 1rem; }
   .contactForm textarea {
     background-color: #DBC4DF;
     border: none;
     color: #fff;
     padding: 0.3vw; }
+  .contactForm ::placeholder {
+    color: #fff;
+    font-size: 1rem; }
   .contactForm fieldset {
     border: none;
     color: #B88BAD;
@@ -280,11 +314,12 @@ table.planes {
     flex-wrap: wrap;
     align-items: center;
     gap: 1vw; }
-    .contactForm fieldset span {
+    .contactForm fieldset .check {
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 0.5vw; }
+      gap: 0.5vw;
+      font-size: 1rem; }
 
 .contactAdress {
   background-color: #fff;
@@ -293,7 +328,7 @@ table.planes {
   padding: 1vw;
   color: #B88BAD;
   background-color: #DBC4DF;
-  width: 380px; }
+  width: 348px; }
   .contactAdress h2 {
     font-size: 1.7rem;
     padding-bottom: 1rem; }
@@ -317,7 +352,12 @@ input.buttonSend {
   background-color: #B88BAD; }
 
 .card {
-  box-shadow: 3px 3px 3px #B88BAD; }
+  box-shadow: 3px 3px 3px #B88BAD;
+  font-size: 1rem; }
+  .card .resaltador {
+    background-color: #F4E2D2; }
+  .card .hashtag {
+    font-weight: bold; }
 
 .infoPersonal {
   display: grid;
@@ -401,6 +441,12 @@ input.buttonSend {
   border-bottom: dashed 3px #DBC4DF;
   padding: 0.5rem 0; }
 
+.projects {
+  display: flex;
+  justify-content: center; }
+  .projects .row {
+    max-width: 800px; }
+
 footer {
   background-color: #B88BAD;
   color: #FFF5FB;
@@ -453,18 +499,16 @@ footer {
     margin: 1.5rem 0rem;
     font-size: 2.5rem;
     padding: 0 0 0 2vw; }
-  body {
-    font-size: 3rem; }
   .servicios article {
-    width: 40vw;
+    width: 27vw;
     column-gap: 5vw; }
     .servicios article h3 {
-      font-size: 6rem;
+      font-size: 3rem;
       padding: .8rem;
-      height: 15rem;
+      height: 9rem;
       width: 80%; }
     .servicios article p {
-      font-size: 4rem; }
+      font-size: 2.5rem; }
   .servicios div {
     height: 35%;
     margin-bottom: 2%; } }
@@ -473,20 +517,22 @@ footer {
   .banner__info {
     width: 350px; }
     .banner__info h1 {
-      font-size: 4.5rem;
+      font-size: 4rem;
       margin-bottom: 1vh; }
     .banner__info h2 {
       font-size: 3.2rem; }
-  .titulo--1 {
-    width: 27rem; }
-  .titulo--2 {
-    width: 31rem; }
+  /*     .titulo--1
+    {
+        width: 27rem;
+    }
+    .titulo--2
+    {
+        width: 31rem;
+    } */
   .titulo span {
     margin-bottom: 1.5rem; }
   .servicios {
-    column-gap: 12vw; }
-    .servicios article {
-      width: 30vw; } }
+    column-gap: 5vw; } }
 
 @media screen and (max-width: 1024px) {
   .infoPersonal h3 {
@@ -505,6 +551,9 @@ footer {
   .infoPersonal p {
     font-size: 1.1rem;
     font-weight: lighter; }
+  .servicios {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5vw; }
   .carousel {
     width: 80vw;
     margin: 9vw 10vw; }
@@ -540,7 +589,8 @@ footer {
     width: 90px;
     margin: 1% 2vw; }
   .navbar {
-    margin: 0; }
+    margin: 1rem 0;
+    font-size: 1.3rem; }
     .navbar .container-fluid {
       justify-content: center; }
   .navbar-nav {
@@ -548,14 +598,18 @@ footer {
   .banner__info {
     width: 270px; }
     .banner__info h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
       margin-bottom: 0.5vh; }
     .banner__info h2 {
       font-size: 3.2rem; }
-  .titulo--1 {
-    width: 21rem; }
-  .titulo--2 {
-    width: 24rem; }
+  /*     .titulo--1
+    {
+        width: 21rem;
+    }
+    .titulo--2
+    {
+        width: 24rem;
+    } */
   .titulo span {
     margin-bottom: 1rem; }
   .menu__usos {
@@ -581,13 +635,28 @@ footer {
   .servicios {
     column-gap: 5vw; }
     .servicios article {
-      width: 40vw; } }
+      width: 40vw; }
+  .contact {
+    flex-direction: column;
+    align-content: center;
+    row-gap: 5vw; }
+  .contactForm {
+    background-color: #fff;
+    width: 350px;
+    display: grid;
+    grid-template-areas: "tagName" "inputName" "tagMail" "inputMail" "tagCountry" "inputCountry" "tagServices" "inputServices" "tagMessage" "inputMessage" "buttonSend";
+    text-align: right;
+    gap: 1vw; }
+    .contactForm label {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: left; }
+  .projects .row {
+    max-width: 480px; } }
 
 @media screen and (max-width: 660px) {
   .servicios {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "servicio1" "servicio2" "servicio3" "servicio4";
     column-gap: none; }
     .servicios article {
       width: 100%; }
@@ -627,10 +696,13 @@ footer {
     margin-bottom: 1vh; }
   .banner__info h2 {
     font-size: 3.2rem; }
-  .titulo--1 {
-    width: 27rem; }
-  .titulo--2 {
-    width: 31rem; }
+  /*     .titulo--1 {
+        width: 27rem;
+    }
+
+    .titulo--2 {
+        width: 32rem;
+    } */
   .titulo span {
     margin-bottom: 1.5rem; }
   .carousel {
@@ -646,6 +718,10 @@ footer {
     background-color: rgba(255, 255, 255, 0.85);
     color: #B88BAD; } }
 
+@media screen and (max-width: 576px) {
+  .dropdown-menu.show {
+    text-align: center; } }
+
 @media screen and (max-width: 450px) {
   .infoPersonal {
     grid-template-columns: 1fr;
@@ -658,22 +734,11 @@ footer {
   .experienciaLaboral__item {
     padding: 5px;
     width: 90%; }
-  .contactForm {
-    background-color: #fff;
-    width: 350px;
-    display: grid;
-    grid-template-areas: "tagName" "inputName" "tagMail" "inputMail" "tagCountry" "inputCountry" "tagServices" "inputServices" "tagMessage" "inputMessage" "buttonSend";
-    text-align: right;
-    gap: 1vw; }
-    .contactForm label {
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-align: left; }
-  .contactForm .table {
+  .table {
     min-width: 500px; }
-    .contactForm .table td {
+    .table td {
       font-size: 1.8rem; }
-    .contactForm .table th {
+    .table th {
       font-size: 1.9rem; } }
 
 @media screen and (max-width: 360px) {
@@ -687,10 +752,13 @@ footer {
       margin-bottom: 0.5vh; }
     .banner__info h2 {
       font-size: 3.2rem; }
-  .titulo--1 {
-    width: 17rem; }
-  .titulo--2 {
-    width: 20rem; }
+  /*     .titulo--1 {
+        width: 17rem;
+    }
+
+    .titulo--2 {
+        width: 20rem;
+    } */
   .titulo span {
     margin-bottom: 1rem; }
   .carousel-caption h5 {

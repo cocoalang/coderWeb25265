@@ -20,17 +20,19 @@
         "NONE buttonSend";
     text-align: right;
     gap: 1vw;
+    font-size: 1.3vw;
 
     input {
         background-color: #DBC4DF;
         border: none;
         color: #fff;
         padding: 0.3vw;
+        font-size: 1rem;
     }
 
 
     label {
-        font-size: 1.9vw;
+
         color: $colorPpal;
     }
 
@@ -39,6 +41,7 @@
         border: none;
         color: #fff;
         padding: 0.3vw;
+        font-size: 1rem;
     }
 
     textarea {
@@ -46,6 +49,10 @@
         border: none;
         color: #fff;
         padding: 0.3vw;
+    }
+    ::placeholder {
+        color: #fff; 
+        font-size: 1rem;
     }
 
     fieldset {
@@ -57,11 +64,12 @@
         align-items: center;
         gap: 1vw;
 
-        span {
+        .check {
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 0.5vw;
+            font-size: 1rem;
         }
     }
 
@@ -75,7 +83,7 @@
     padding: 1vw;
     color: $colorPpal;
     background-color: #DBC4DF;
-    width: 380px;
+    width: 348px;
 
     h2 {
         font-size: 1.7rem;
